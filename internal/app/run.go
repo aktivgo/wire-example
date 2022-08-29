@@ -1,10 +1,14 @@
 package app
 
 import (
+	"log"
 	"wire/internal/app/dependency"
 )
 
 func Run() {
 	server := dependency.GetSomethingHttpServerDependency()
-	server.CommonDependency.Logger
+
+	if err := server.SomethingHandler.Handle(); err != nil {
+		log.Println(err)
+	}
 }

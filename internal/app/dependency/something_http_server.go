@@ -7,8 +7,7 @@ import (
 )
 
 type SomethingHttpServerDependency struct {
-	CommonDependency           CommonDependency
-	SomethingHandlerDependency SomethingHandlerDependency
+	CommonDependency CommonDependency
 
 	SomethingHandler handler.SomethingHandler
 }
@@ -19,7 +18,6 @@ func GetSomethingHttpServerDependency() SomethingHttpServerDependency {
 			wire.Struct(new(SomethingHttpServerDependency), "*"),
 
 			GetCommonDependency,
-			GetSomethingHandlerDependency,
 
 			ProvideSomethingHandler,
 		),

@@ -15,6 +15,8 @@ func GetSomethingHandlerDependency() SomethingHandlerDependency {
 		wire.Build(
 			wire.Struct(new(SomethingHandlerDependency), "*"),
 
+			GetSomethingServiceDepenedency,
+
 			ProvideSomethingService,
 		),
 	)
