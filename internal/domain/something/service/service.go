@@ -1,5 +1,5 @@
 package service
 
-type SomethingService interface {
+type Service interface {
 	GetMessage() (string, error)
 }

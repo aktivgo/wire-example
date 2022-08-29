@@ -1,3 +1,5 @@
+//go:build wireinject
+
 package dependency
 
 import (
@@ -17,5 +19,12 @@ func GetCommonDependency() CommonDependency {
 
 			ProvideLogger,
 		),
+	)
+}
+
+func SingletonGetCommonDependency() CommonDependency {
+	return Singleton(
+		"GetCommonDependency",
+		GetCommonDependency,
 	)
 }

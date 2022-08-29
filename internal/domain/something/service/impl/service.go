@@ -6,11 +6,11 @@ import (
 )
 
 type service struct {
-	repository repository.SomethingRepository
+	repository repository.Repository
 }
 
 func NewService(
-	repository repository.SomethingRepository,
+	repository repository.Repository,
 ) *service {
 	return &service{
 		repository: repository,

@@ -1,5 +1,5 @@
 package handler
 
-type SomethingHandler interface {
+type Handler interface {
 	Handle() error
 }

@@ -6,9 +6,9 @@ import (
 )
 
 func Run() {
-	server := dependency.GetSomethingHttpServerDependency()
+	server := dependency.GetHttpServerDependency()
 
-	if err := server.SomethingHandler.Handle(); err != nil {
+	if err := server.Handler.Handle(); err != nil {
 		log.Println(err)
 	}
 }
